@@ -27,3 +27,11 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('AngularApp app is running!');
   });
 });
+
+describe('MojaUsługa', () => {
+  it('powinna zwrócić "Hello World"', () => { 
+      const usługa = new MojaUsługa(); 
+      const wynik = usługa.getPowitanie(); 
+      expect(wynik).toBe('Hello World');
+  });
+});
