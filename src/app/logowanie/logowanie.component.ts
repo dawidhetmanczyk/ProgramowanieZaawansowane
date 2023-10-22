@@ -1,20 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
+@Component({
+  selector: 'app-logowanie',
+  templateUrl: './logowanie.component.html',
+  styleUrls: ['./logowanie.component.scss']
+})
+export class LogowanieComponent implements OnInit {
 
-@Component({selector: 'app-logowanie',
-templateUrl: './logowanie.component.html',
-styleUrls: ['./logowanie.component.css']})
-export class LogowanieComponent {
-    formData = {
-        username: '',
-        password: ''
-    };
-    logowanie() {
-        // Tutaj można zaimplementować logikę logowania
-        if (this.formData.username === 'przykladowyUzytkownik' && this.formData.password === 'przykladoweHaslo') {
-            console.log('Zalogowano pomyślnie');
-        } else {
-            console.log('Błąd logowania. Sprawdź dane.');
-        }
+  formData = {
+    username: '',
+    password: ''
+  }
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  logowanie() {
+    if(this.formData.username === 'przykladowyUzytkownik' && this.formData.password === 'przykladoweHaslo') {
+      console.log('Zalogowano pomyślnie');
+    } else {
+      console.log('Błąd logowanie. Sprawdź dane.');
     }
+  }
+
 }
