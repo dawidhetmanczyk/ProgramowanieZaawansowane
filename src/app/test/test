@@ -1,0 +1,5 @@
+describe('MojaUsługa', () => {
+    it('powinna zwrócić "Hello World"', () => { 
+        const usługa = new MojaUsługa(); const wynik = usługa.getPowitanie(); expect(wynik).toBe('Hello World');
+    });
+});
